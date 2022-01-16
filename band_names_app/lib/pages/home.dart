@@ -65,11 +65,14 @@ class _HomePageState extends State<HomePage> {
           mainAxisSize: MainAxisSize.min,
           children: [
             bands.isEmpty
-                ? const SizedBox(
+                ? SizedBox(
                     width: double.infinity,
                     height: 200,
                     child: Center(
-                      child: CircularProgressIndicator(),
+                      child: Text(
+                        'No hay bandas disponibles',
+                        style: Theme.of(context).textTheme.headline6!.copyWith(color: Colors.red),
+                      ),
                     ),
                   )
                 : ShowCharts(list: bands),
