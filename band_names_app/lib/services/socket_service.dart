@@ -19,7 +19,8 @@ class SocketService with ChangeNotifier {
   }
 
   void _initConfig() {
-    _socket = IO.io('https://band-names-app.herokuapp.com/', {
+    // _socket = IO.io('https://localhost:5000/v1/ws/bands-room', {
+    _socket = IO.io('http://localhost:3001/v1/bands-room', {
       'transports': ['websocket'],
       'autoConnect': true,
     });

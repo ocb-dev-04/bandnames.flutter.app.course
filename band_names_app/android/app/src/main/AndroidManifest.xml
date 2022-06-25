@@ -1,7 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.band_names">
+    package="com.example.band_names_app">
+   
+   <uses-permission android:name="android.permission.INTERNET"/>
+   
    <application
-        android:label="band_names"
+        android:label="band_names_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
